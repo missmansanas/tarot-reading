@@ -1,13 +1,19 @@
-import Card from "react-bootstrap/Card"
+import Card from "react-bootstrap/Card";
+import { useState } from "react";
+import Collapse from "react-bootstrap/Collapse";
 
 const CardApp = ({ card }) => {
+    const [open, setOpen] = useState(false);
+
     return (
     <Card>
-    <Card.Img src={card.arcana === "Minor" ? require(`./assets/${card.suit}${card.rank}.jpg`) : require(`./assets/${card.rank}-${card.name.replace(" ","")}.jpg`)}></Card.Img>
-    <Card.Body>
-        <Card.Title className="display-6">{card.name}</Card.Title>
-        <Card.Text className="lead">{card.description}</Card.Text>
-    </Card.Body>
+    <Card.Img className="readcard" src={card.arcana === "Minor" ? require(`./assets/${card.suit}${card.rank}.jpg`) : require(`./assets/${card.rank}-${card.name.replace(/ /g,"")}.jpg`)} onClick={()=>setOpen(!open)}></Card.Img>
+    <Collapse in={open}>
+        <Card.Body>
+            <Card.Title>{card.name}</Card.Title>
+            <Card.Text className="lead">{card.description}</Card.Text>
+        </Card.Body>
+    </Collapse>
     </Card>
     )
     

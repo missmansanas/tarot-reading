@@ -1,7 +1,17 @@
 img.deck {
-  transition: transform ease 500ms;
+  transition: all ease 350ms;
 }
 
 img.deck:hover {
-  transform: rotate(-1deg) translate(0px, 5px);
+  transform: rotate(-0.5deg) translate(0px, 1px);
+  box-shadow: 2px 4px 12px grey;
+}
+
+.readcard {
+  transition: all ease 350ms;
+}
+
+.readcard:hover {
+  transform: rotate(1deg) translate(0px, -1px);
+  box-shadow: 2px 4px 12px grey;
 }

@@ -5,7 +5,7 @@ import { useState } from 'react';
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Button from "react-bootstrap/Button";
+// import Button from "react-bootstrap/Button";
 import CardApp from "./CardApp";
 
 function App() {
@@ -39,26 +39,31 @@ function App() {
   }
 
   return (
-    <div className="App container-md">
+    <div className="App">
 
-      <Container className="m-3">
+      <Container>
+        <h1 className="display-4 text-center my-3">Tarot Reading</h1>
+      </Container>
+
+      <Container className="m-auto container-lg">
         <Row className="justify-content-center">
-          <Col xs="auto" lg={2} className="p-2">
+          <Col xs={5} lg={2} className="p-2">
             <img onClick={readThree} className="deck rounded img-fluid" src={require("./assets/CardBacks.jpg")} alt=""/><br/>
-            <Button className="shuffle px-5 my-3">Shuffle</Button>
+            {/* <Button className="shuffle px-5 my-3">Shuffle</Button> */}
           </Col>
               {reading?.length > 0
                 ? (<>
                   {reading.map((reading) => {
                     return (
-                    <Col lg={2} className="p-2 border-0">
-                    <CardApp card={reading}/>
+                    <Col xs={5} lg={2} className="p-2 border-0">
+                      <CardApp card={reading}/>
                     </Col>
                     )
                   })}
                     </>
                   ) : (
-                  <Col xs={3} lg={8} className="p-3 border border-tertiary bg-none">Click on the deck to pick three cards.</Col>
+                  <Col xs="auto" lg={2} className="p-3 border-0">
+                    <p className="lead">Click on the deck to immediately draw three cards. Click on each drawn card to reveal its meaning.</p></Col>
                 )
               }
         </Row>
