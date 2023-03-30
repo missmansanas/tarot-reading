@@ -46,8 +46,8 @@ function App() {
       </Container>
 
       <Container className="m-auto container-lg">
-        <Row className="justify-content-center">
-          <Col xs={5} lg={2} className="p-2">
+        <Row className="justify-content-center my-5">
+          <Col xs={5} lg={2} className="p-2 bg-transparent border-white">
             <img onClick={readThree} className="deck rounded img-fluid" src={require("./assets/CardBacks.jpg")} alt=""/><br/>
             {/* <Button className="shuffle px-5 my-3">Shuffle</Button> */}
           </Col>
@@ -55,7 +55,7 @@ function App() {
                 ? (<>
                   {reading.map((reading) => {
                     return (
-                    <Col xs={5} lg={2} className="p-2 border-0">
+                    <Col xs={5} lg={2} className="p-2 border-0 bg-transparent">
                       <CardApp card={reading}/>
                     </Col>
                     )

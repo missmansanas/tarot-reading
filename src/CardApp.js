@@ -6,12 +6,12 @@ const CardApp = ({ card }) => {
     const [open, setOpen] = useState(false);
 
     return (
-    <Card>
+    <Card className="bg-transparent border-white">
     <Card.Img className="readcard" src={card.arcana === "Minor" ? require(`./assets/${card.suit}${card.rank}.jpg`) : require(`./assets/${card.rank}-${card.name.replace(/ /g,"")}.jpg`)} onClick={()=>setOpen(!open)}></Card.Img>
     <Collapse in={open}>
         <Card.Body>
             <Card.Title>{card.name}</Card.Title>
-            <Card.Text className="lead">{card.description}</Card.Text>
+            <Card.Text>{card.description}</Card.Text>
         </Card.Body>
     </Collapse>
     </Card>
