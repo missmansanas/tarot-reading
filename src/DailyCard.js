@@ -28,12 +28,12 @@ const DailyCard = () => {
     };
 
     const currentDate = new Date().toLocaleDateString();
-    if (localStorage.getItem('dailyCardDate') !== currentDate) {
+    if (localStorage.getItem('dailyCardDate') !== currentDate || localStorage.getItem('dailyCard') === undefined) {
         setDailyCardDate(currentDate);
         localStorage.setItem('dailyCardDate', currentDate);
         readOne();
-    } else if (localStorage.getItem('dailyCard') === dailyCard) {
-        readOne();
+    } else if (localStorage.getItem('dailyCardDate') === currentDate && localStorage.getItem('dailyCard') !== undefined) {
+        setDailyCard(localStorage.getItem('dailyCard'))
     }
     
     return (
@@ -42,7 +42,7 @@ const DailyCard = () => {
 
         {dailyCard === undefined
                 ? (
-                    <Col xs={2}><button onClick={readOne}>Get daily reading</button></Col>
+                    <Col xs={2}><button onClick={readOne()}>Get daily reading</button></Col>
                 ) : (
                 <>
                     <Col xs={2}>
@@ -50,8 +50,8 @@ const DailyCard = () => {
                         <Card.Img className="readcard" src={dailyCard.arcana === "Minor" ? require(`./assets/${dailyCard.suit}${dailyCard.rank}.jpg`) : require(`./assets/${dailyCard.rank}-${dailyCard.name.replace(/ /g,"")}.jpg`)}></Card.Img>
                     </Card>
                     </Col>
-                    <Col xs={2}>
-                        <Card>
+                    <Col xs={4}>
+                        <Card className="bg-transparent border-0">
                             <Card.Body>
                                 <Card.Title>{dailyCard.name}</Card.Title>
                                 <Card.Text>{dailyCard.description}</Card.Text>

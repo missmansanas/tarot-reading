@@ -5,8 +5,9 @@ import { useState } from 'react';
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-// import Button from "react-bootstrap/Button";
 import CardApp from "./CardApp";
+import About from "./About";
+import FAQ from "./FAQ";
 
 function App() {
   const [reading, setReading] = useState()
@@ -42,6 +43,7 @@ function App() {
     <div className="App">
 
       <Container>
+      <About/> <FAQ/>
         <h1 className="display-4 text-center my-3">Tarot Reading</h1>
       </Container>
 
