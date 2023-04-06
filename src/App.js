@@ -9,6 +9,7 @@ import CardApp from "./CardApp";
 import About from "./About";
 import FAQ from "./FAQ";
 
+
 function App() {
   const [reading, setReading] = useState()
 
@@ -42,13 +43,12 @@ function App() {
   return (
     <div className="App">
 
-      <Container>
-      <About/> <FAQ/>
-        <h1 className="display-4 text-center my-3">Tarot Reading</h1>
+      <Container className="my-3 ms-3 nav">
+        <FAQ/><About/>
       </Container>
 
       <Container className="m-auto container-lg">
-        <Row className="justify-content-center my-5">
+        <Row className="justify-content-center m-auto">
           <Col xs={5} lg={2} className="p-2 bg-transparent border-white">
             <img onClick={readThree} className="deck rounded img-fluid" src={require("./assets/CardBacks.jpg")} alt=""/><br/>
             {/* <Button className="shuffle px-5 my-3">Shuffle</Button> */}
@@ -65,6 +65,7 @@ function App() {
                     </>
                   ) : (
                   <Col xs="auto" lg={2} className="p-3 border-0">
+                    <p className="display-6">New here?</p>
                     <p className="lead">Click on the deck to immediately draw three cards. Click on each drawn card to reveal its meaning.</p></Col>
                 )
               }

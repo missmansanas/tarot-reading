@@ -10,13 +10,13 @@ function About() {
 
   return (
     <>
-      <Button variant="light" onClick={handleShow}  className="mt-3 text-center bg-transparent">
+      <Button variant="light" onClick={handleShow}  className="border-0 bg-transparent text-black">
         About
       </Button>
 
       <Offcanvas show={show} onHide={handleClose}>
         <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Offcanvas</Offcanvas.Title>
+          <Offcanvas.Title>About</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body className="text-black">
         <h6>Credits</h6>

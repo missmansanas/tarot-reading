@@ -5,7 +5,7 @@ body {
   background-repeat: no-repeat;
   background-color: white;
   height: 100vh;
-  color: white;
+  color: black;
   background-attachment: fixed;
 }
 
@@ -28,17 +28,31 @@ img.deck:hover {
   box-shadow: 2px 4px 12px #333333;
 }
 
-.col-5:nth-of-type(2) {
-  animation: 700ms move ease forwards;
-}
-.col-5:nth-of-type(3) {
-  animation: 800ms move ease forwards;
-}
-.col-5:nth-of-type(4) {
-  animation: 900ms move ease forwards;
+.card-body {
+  background-color: #ffffff33;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
 }
 
-@keyframes move {
+.col-5:nth-of-type(2) .card {
+  animation: 1s move1;
+}
+.col-5:nth-of-type(3) .card {
+  animation: 1s move2;
+}
+.col-5:nth-of-type(4) .card {
+  animation: 1s move3;
+}
+
+@keyframes move1 {
   from {transform: translateX(-100%);}
+  to {transform: translateX(0%);}
+}
+@keyframes move2 {
+  from {transform: translateX(-200%);}
+  to {transform: translateX(0%);}
+}
+@keyframes move3 {
+  from {transform: translateX(-300%);}
   to {transform: translateX(0%);}
 }
