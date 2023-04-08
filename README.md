@@ -4,6 +4,6 @@ Thanks to [geraldfingburke](https://github.com/geraldfingburke/plateau-tarot-api
 
 # To-do
 - [] Personalize card interpretations
-- [] Make card of the day work
-- [x] Add offcanvas/navbar for information
-- [] Finalize design
+- [] Card of the da
+- [x] Add panel/navbar for information
+- [x] Update design
