@@ -10,8 +10,8 @@ const CardApp = ({ card }) => {
     <Card.Img className="readcard" src={card.arcana === "Minor" ? require(`./assets/${card.suit}${card.rank}.jpg`) : require(`./assets/${card.rank}-${card.name.replace(/ /g,"")}.jpg`)} onClick={()=>setOpen(!open)}></Card.Img>
     <Collapse in={open}>
         <Card.Body>
-            <Card.Title>{card.name}</Card.Title>
             <Card.Text>{card.description}</Card.Text>
+            <Card.Subtitle>Symbols: {card.symbols}</Card.Subtitle>
         </Card.Body>
     </Collapse>
     </Card>

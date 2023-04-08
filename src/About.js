@@ -10,8 +10,8 @@ function About() {
 
   return (
     <>
-      <Button variant="light" onClick={handleShow}  className="border-0 bg-transparent text-black">
-        About
+      <Button variant="light" onClick={handleShow}  className="border-0 bg-transparent text-black mx-1">
+        <span className="lead">About</span>
       </Button>
 
       <Offcanvas show={show} onHide={handleClose}>
@@ -19,15 +19,17 @@ function About() {
           <Offcanvas.Title>About</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body className="text-black">
-        <h6>Credits</h6>
-          <p>Thanks to <a href="https://github.com/geraldfingburke/plateau-tarot-api">geraldfingburke</a> for the original tarot data JSON, and <a href="https://luciellaes.itch.io/rider-waite-smith-tarot-cards-cc0">luciellaes</a> for the scanned tarot images.</p>
-        <h6>To-do</h6>
+          <p>This web app was developed by me (@missmansanas) to combine my interests in coding and tarot. ☕ Consider <a href="https://ko-fi.com/missmansanas">buying me a coffee</a> if you enjoyed the service.</p>
+          <p>This site is free to interact with an unlimited number of times, for now. Do not scrape, remix, reproduce or resell the contents of this site in any way :)</p>
+
+        <h5>Credits</h5>
+          <p>Thanks to <a href="https://github.com/geraldfingburke/plateau-tarot-api">geraldfingburke</a> for the base tarot data JSON, and <a href="https://luciellaes.itch.io/rider-waite-smith-tarot-cards-cc0">luciellaes</a> for the scanned tarot images.</p>
+        <h5>Planned Features</h5>
           <ul>
-            <li>Personalize card interpretations</li>
-            <li>Make card of the day work</li>
-            <li><s>Add offcanvas/navbar for information</s></li>
-            <li>Finalize design</li>
+            <li>Updated card interpretations</li>
+            <li>Card of the day</li>
           </ul>
+          <p>I am currently not offering personal tarot readings, but this may change in the future.</p>
         </Offcanvas.Body>
       </Offcanvas>
     </>

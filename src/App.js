@@ -42,16 +42,15 @@ function App() {
 
   return (
     <div className="App">
-
-      <Container className="my-3 ms-3 nav">
+      <h1 className="display-5 text-center mt-4">Tarot Reading</h1>
+      <Container className="mb-4 m-auto nav justify-content-center">
         <FAQ/><About/>
       </Container>
 
-      <Container className="m-auto container-lg">
+      <Container className="m-auto container-md p-md-3">
         <Row className="justify-content-center m-auto">
           <Col xs={5} lg={2} className="p-2 bg-transparent border-white">
             <img onClick={readThree} className="deck rounded img-fluid" src={require("./assets/CardBacks.jpg")} alt=""/><br/>
-            {/* <Button className="shuffle px-5 my-3">Shuffle</Button> */}
           </Col>
               {reading?.length > 0
                 ? (<>

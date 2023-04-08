@@ -10,22 +10,23 @@ function FAQ() {
 
   return (
     <>
-      <Button variant="light" onClick={handleShow}  className="border-0 bg-transparent text-black">
-        How it works
+      <Button variant="light" onClick={handleShow}  className="border-0 bg-transparent text-black mx-1">
+        <span className="lead">How to use</span>
       </Button>
 
       <Offcanvas show={show} onHide={handleClose}>
         <Offcanvas.Header closeButton>
-          <Offcanvas.Title>How it works</Offcanvas.Title>
+          <Offcanvas.Title>How to...</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body className="text-black bg-transparent">
-          <h5>Interacting with the app</h5>
-            <p>Click on the violet deck to generate three random cards. Click on any card to reveal/hide its meaning. Generate a new spread as many times as you wish.</p>
-            <p>Each spread will always deal three unique cards. You won't, for example, get the Ace of Swords side-by-side - though it may re-appear in the very next reading you request.</p>
-          <h5>Interpreting the cards</h5>
-            <p>As an automated reading, the revealed meaning of each card will be generic to that card. It does not take into account the other two cards that have appeared beside it. It also can't read any context.</p>
-            <p>If you're seeking something with more depth and empathy, you will need to call on your own intuitive input or seek a human reader.</p>
-          <h5>Reading ideas</h5>
+          <h5>...interact with the app</h5>
+            <p>Click on the violet deck to generate three random cards. Click on any card to reveal/hide its meaning.</p>
+            <p>Each spread will always deal three cards unique from each other, but cards can reappear between spreads (the next time you click the deck).</p>
+          <h5>...read the cards</h5>
+            <p>The card meanings are pulled directly from a list and printed as is. It doesn't change to account for the context of your query or the other cards that were drawn.</p>
+            <p>If you're seeking something with more depth, empathy and personalization, you will need to call on your own intuition or seek a human reader.</p>
+          <h5>...read the spread</h5>
+            <p>Some simple ways to interpret three cards together:</p>
             <ul>
               <li>past, present, future</li>
               <li>situation, action, outcome</li>
