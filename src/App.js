@@ -42,8 +42,8 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className="display-5 text-center mt-4">Tarot Reading</h1>
-      <Container className="mb-4 m-auto nav justify-content-center">
+      <h1 className="display-3 displayfont text-center mt-4 mb-0">Tarot Reading</h1>
+      <Container className="mt-0 pt-0 mb-4 m-auto nav justify-content-center">
         <FAQ/><About/>
       </Container>
 
@@ -63,8 +63,8 @@ function App() {
                   })}
                     </>
                   ) : (
-                  <Col xs="auto" lg={2} className="p-3 border-0">
-                    <p className="display-6">New here?</p>
+                  <Col xs="auto" lg={3} className="p-3 border-0">
+                    <p className="display-6 displayfont">New here?</p>
                     <p className="lead">Click on the deck to immediately draw three cards. Click on each drawn card to reveal its meaning.</p></Col>
                 )
               }

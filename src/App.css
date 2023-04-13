@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Milchella";
+  src: url("./assets/Milchella-Regular.ttf");
+}
+
 body {
   background: linear-gradient(217deg, rgba(255,0,0,.5), rgba(255,0,0,0) 70.71%),
               linear-gradient(127deg, rgba(0,255,0,.5), rgba(0,255,0,0) 70.71%),
@@ -7,6 +12,11 @@ body {
   height: 90vh;
   color: black;
   background-attachment: fixed;
+}
+
+.displayfont {
+  font-family: 'Milchella';
+  font-size: rem;
 }
 
 img.deck {
