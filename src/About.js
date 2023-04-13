@@ -16,7 +16,7 @@ function About() {
 
       <Offcanvas show={show} onHide={handleClose}>
         <Offcanvas.Header closeButton>
-          <Offcanvas.Title>About</Offcanvas.Title>
+          <Offcanvas.Title className="displayfont">About</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body className="text-black">
           <p>This web app was developed by me (@missmansanas) to combine my interests in coding and tarot.</p>
