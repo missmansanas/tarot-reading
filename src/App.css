@@ -4,14 +4,35 @@
 }
 
 body {
-  background: linear-gradient(217deg, rgba(255,0,0,.5), rgba(255,0,0,0) 70.71%),
-              linear-gradient(127deg, rgba(0,255,0,.5), rgba(0,255,0,0) 70.71%),
-              linear-gradient(336deg, rgba(0,0,255,.5), rgba(0,0,255,0) 70.71%);
+  background: linear-gradient(217deg,rgb(126,39,67,1), rgba(255,0,0,0) 70.71%),
+              linear-gradient(127deg, rgb(57,72,126,1), rgba(0,255,0,0) 70.71%),
+              linear-gradient(336deg, rgb(226,117,77,0.5), rgba(0,0,255,0) 70.71%);
   background-repeat: no-repeat;
   background-color: white;
   height: 90vh;
   color: black;
   background-attachment: fixed;
+  text-shadow: none;
+}
+
+a, a:hover, a:active, a:visited {
+  color: inherit;
+  text-decoration: none;
+  transition: all 350ms;
+}
+
+a:hover, .btn-light:hover {
+  color: #6B2274 !important;
+  transition: all 500ms;
+}
+
+h1::before {
+  content: url("./assets/moon.png");
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  height: 4rem;
 }
 
 .displayfont {

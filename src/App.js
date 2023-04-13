@@ -42,12 +42,12 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className="display-3 displayfont text-center mt-4 mb-0">Tarot Reading</h1>
+      <h1 className="display-4 displayfont text-center mt-4 mb-0"><a href="/">Tarot Reading</a></h1>
       <Container className="mt-0 pt-0 mb-4 m-auto nav justify-content-center">
         <FAQ/><About/>
       </Container>
 
-      <Container className="m-auto container-md p-md-3">
+      <Container className="m-auto container-md px-md-3">
         <Row className="justify-content-center m-auto">
           <Col xs={5} lg={2} className="p-2 bg-transparent border-white">
             <img onClick={readThree} className="deck rounded img-fluid" src={require("./assets/CardBacks.jpg")} alt=""/><br/>

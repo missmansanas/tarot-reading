@@ -23,9 +23,9 @@ function About() {
           <p>This site is free to interact with an unlimited number of times, for now. ☕ Consider <a href="https://ko-fi.com/missmansanas">buying me a coffee</a> if you enjoyed the service.</p>
           <p>Please do not scrape, remix, reproduce or resell the contents of this site in any way :)</p>
 
-        <h5>Credits</h5>
+        <h5 className="displayfont display-6">Credits</h5>
           <p>Thanks to <a href="https://github.com/geraldfingburke/plateau-tarot-api">geraldfingburke</a> for the base tarot data JSON, and <a href="https://luciellaes.itch.io/rider-waite-smith-tarot-cards-cc0">luciellaes</a> for the scanned tarot images.</p>
-        <h5>Planned Features</h5>
+        <h5 className="displayfont display-6">Planned Features</h5>
           <ul>
             <li>Updated card interpretations</li>
             <li>Card of the day</li>
