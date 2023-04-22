@@ -47,7 +47,7 @@ function App() {
         <FAQ/><About/>
       </Container>
 
-      <Container className="m-auto container-md px-md-3">
+      <Container className="app-body m-auto container-md px-md-3 align-content-center d-flex flex-row flex-wrap">
         <Row className="justify-content-center m-auto">
           <Col xs={5} lg={2} className="p-2 bg-transparent border-white">
             <img onClick={readThree} className="deck rounded img-fluid" src={require("./assets/CardBacks.jpg")} alt=""/><br/>

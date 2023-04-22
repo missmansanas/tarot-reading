@@ -4,16 +4,19 @@
 }
 
 body {
-  background: linear-gradient(217deg,rgb(207, 99, 133),rgba(255,0,0,0) 70.71%),
-              linear-gradient(127deg, rgb(0,44,204,1),rgba(0,255,0,0) 70.71%),
-              linear-gradient(336deg,rgb(235, 216, 71),rgba(0,0,255,0) 70.71%);
+  background: linear-gradient(217deg,rgb(200,136,152),rgba(255,0,0,0) 70.71%),
+              linear-gradient(127deg, rgb(138,155,199),rgba(0,255,0,0) 70.71%),
+              linear-gradient(336deg,rgb(189,158,190),rgba(0,0,255,0) 70.71%);
   background-repeat: no-repeat;
   background-color: white;
-  height: 90vh;
   color: black;
   background-attachment: fixed;
   text-shadow: none;
 }
+
+/* .app-body {
+  height: 70vh;
+} */
 
 a, a:hover, a:active, a:visited {
   color: inherit;
