@@ -2,7 +2,7 @@ import Card from "react-bootstrap/Card";
 import { useState } from "react";
 import Collapse from "react-bootstrap/Collapse";
 
-const CardApp = ({ card }) => {
+const TarotCard = ({ card }) => {
     const [open, setOpen] = useState(false);
 
     return (
@@ -19,4 +19,4 @@ const CardApp = ({ card }) => {
     
 }
 
-export default CardApp;
+export default TarotCard;
