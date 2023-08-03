@@ -55,9 +55,9 @@ const ThreeCards = () => {
                   })}
                     </>
                   ) : (
-                  <Col xs="auto" lg={3} className="p-3 border-0">
+                  <Col xs="auto" lg={4} className="p-3 border-0">
                     <p className="display-6 displayfont">Click to draw three cards.</p>
-                    </Col>
+                  </Col>
                 )
               }
         </Row>

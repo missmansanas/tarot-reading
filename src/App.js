@@ -14,7 +14,7 @@ function App() {
     <HashRouter>
       <div className="App">
         <h1 className="display-4 displayfont text-center mt-5 mb-3">Tarot Reading</h1>
-        <Container className="d-flex flex-row gap-3 mt-0 pt-0 mb-5 m-auto nav justify-content-center">
+        <Container className="d-flex flex-row gap-1 mt-0 pt-0 mb-5 m-auto nav justify-content-center">
           <NavLink to='/'>Card of the Day</NavLink>
           <NavLink to='/three-card'>Three-Card Spread</NavLink>
           <NavLink to='/about'>About</NavLink>

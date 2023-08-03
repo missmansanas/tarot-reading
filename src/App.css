@@ -30,7 +30,7 @@ a:hover, .btn-light:hover {
 }
 
 .nav > a {
-  padding: 4px;
+  padding: 4px 10px;
 }
 
 .nav > a.active {
