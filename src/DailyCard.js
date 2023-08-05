@@ -45,7 +45,7 @@ const DailyCard = () => {
   return (
     <div className="container mx-auto justify-center items-center">
         {dailyCard !== undefined
-        ? (<div className='grid grid-cols-2 mx-auto md:w-3/4 lg:w-1/2 items-center gap-4 px-5'>
+        ? (<div className='grid grid-cols-1 md:grid-cols-2 mx-auto lg:w-2/3 justify-center text-center items-center gap-4 px-5'>
             <TarotCard card={dailyCard} allowHover="false" />
             <div>
             <p className='displayfont tracking-widest font-bold'>{dailyCard.name}</p>

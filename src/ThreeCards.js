@@ -35,8 +35,7 @@ const ThreeCards = () => {
 
 
   return (
-      <div className="container grid grid-cols-2 lg:grid-cols-6 auto-rows-min mx-auto p-5 gap-4">
-        <div className='hidden lg:block'></div>
+      <div className="container grid grid-cols-2 lg:grid-cols-4 auto-rows-min mx-auto p-5 lg:px-50 gap-4">
         <img src={require('./assets/CardBacks.jpg')} alt="Card Back" className="rounded rounded-leg mx-auto hover:-rotate-3 transition transition-all duration-300 ease-in-out" onClick={readThree}/>
 
       {reading?.length === 3
