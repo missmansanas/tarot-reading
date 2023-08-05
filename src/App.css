@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @font-face {
   font-family: "Milchella";
   src: url("./assets/Milchella-Regular.ttf");
@@ -53,7 +57,7 @@ a:hover, .btn-light:hover {
   font-size: rem;
 }
 
-img.deck {
+/* img.deck {
   transition: all ease 350ms;
   z-index: 999;
 }
@@ -99,4 +103,4 @@ img.deck:hover {
 @keyframes move3 {
   from {transform: translateX(-300%);}
   to {transform: translateX(0%);}
-}
+} */

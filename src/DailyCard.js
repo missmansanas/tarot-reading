@@ -1,10 +1,9 @@
 import {useState, useEffect} from 'react';
 import "./tarot-cards.json";
-import Card from 'react-bootstrap/Card';
 import TarotCard from './TarotCard';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Container from 'react-bootstrap/Container';
+// import Row from 'react-bootstrap/Row';
+// import Col from 'react-bootstrap/Col';
+// import Container from 'react-bootstrap/Container';
 
 const DailyCard = () => {
     const [dailyCard, setDailyCard] = useState(undefined);
@@ -44,37 +43,22 @@ const DailyCard = () => {
       }
 
   return (
-    <Container className="daily-reading">
+    <div className="container mx-auto justify-center items-center">
         {dailyCard !== undefined
-        ? (
-          <Row className="justify-content-center m-auto">
-            <Col xs={5} lg={2} className="p-2 border-0 bg-transparent">
-              <TarotCard card={dailyCard}/>
-            </Col>
-          </Row>
-            /* <Row className="m-auto my-5 justify-content-center">
-                <Col xs={2}>
-                    <Card>
-                        <Card.Img className="readcard" src={dailyCard.arcana === "Minor" ? require(`./assets/${dailyCard.suit}${dailyCard.rank}.jpg`) : require(`./assets/${dailyCard.rank}-${dailyCard.name.replace(/ /g,"")}.jpg`)} />
-                    </Card>
-                </Col>
-                <Col xs={2}>
-                    <Card>
-                    <Card.Body>
-                        <Card.Title>{dailyCard.name}</Card.Title>
-                        <Card.Text>{dailyCard.description}</Card.Text>
-                    </Card.Body>
-                    </Card>
-                </Col>
-            </Row> */
+        ? (<div className='grid grid-cols-2 mx-auto md:w-3/4 lg:w-1/2 items-center gap-4 px-5'>
+            <TarotCard card={dailyCard} allowHover="false" />
+            <div>
+            <p className='displayfont tracking-widest font-bold'>{dailyCard.name}</p>
+            <p className='block md:hidden'>{dailyCard.symbols}</p>
+            <p className='hidden md:block'>{dailyCard.description}</p>
+            </div>
+        </div>
         ) : (
-            <Row className="m-auto my-5 justify-content-center">
-                <Col xs={3}><p className="lead">Checking on the stars...</p></Col>
-            </Row>
+              <p className="lead">Checking on the stars...</p>
         )
         }
 
-    </Container>
+    </div>
   )
 }
 

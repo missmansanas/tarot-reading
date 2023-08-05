@@ -1,9 +1,9 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./tarot-cards.json"
+// import "bootstrap/dist/css/bootstrap.min.css";
+// import "./tarot-cards.json"
 import { useState } from 'react';
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+// import Container from "react-bootstrap/Container";
+// import Row from "react-bootstrap/Row";
+// import Col from "react-bootstrap/Col";
 import TarotCard from "./TarotCard";
 
 
@@ -11,10 +11,8 @@ const ThreeCards = () => {
   const [reading, setReading] = useState()
 
   const readThree = async () => {
-    // Load tarotData from JSON
     const tarotData = require(`./tarot-cards.json`);
 
-    // Generate three random numbers from 0-77
     const numbers = [];
     while (numbers.length < 3) {
       const randomNumber = Math.floor(Math.random() * 78);
@@ -23,7 +21,6 @@ const ThreeCards = () => {
       }
     }
 
-    // Retrieve three tarot cards from JSON data
     const threeCards = [];
     numbers.forEach((randomNumber)=>{
       const card = tarotData.cards[randomNumber];
@@ -38,32 +35,37 @@ const ThreeCards = () => {
 
 
   return (
-    <div>
-      <Container className="app-body m-auto container-md px-md-3 align-content-center d-flex flex-row flex-wrap">
-        <Row className="justify-content-center m-auto">
-          <Col xs={5} lg={2} className="p-2 bg-transparent border-white">
-            <img onClick={readThree} className="deck rounded img-fluid" src={require("./assets/CardBacks.jpg")} alt=""/><br/>
-          </Col>
-              {reading?.length > 0
-                ? (<>
-                  {reading.map((reading) => {
-                    return (
-                    <Col xs={5} lg={2} className="p-2 border-0 bg-transparent">
-                      <TarotCard card={reading}/>
-                    </Col>
-                    )
-                  })}
-                    </>
-                  ) : (
-                  <Col xs="auto" lg={4} className="p-3 border-0">
-                    <p className="display-6 displayfont">Click to draw three cards.</p>
-                  </Col>
-                )
-              }
-        </Row>
-      </Container>
+      <div className="container grid grid-cols-2 lg:grid-cols-6 auto-rows-min mx-auto p-5 gap-4">
+        <div className='hidden lg:block'></div>
+        <img src={require('./assets/CardBacks.jpg')} alt="Card Back" className="rounded rounded-leg mx-auto hover:-rotate-3 transition transition-all duration-300 ease-in-out" onClick={readThree}/>
 
-    </div>
+      {reading?.length === 3
+        ? (<>
+          {reading.map((reading) => {
+            return (
+              <TarotCard card={reading} allowHover="true"/>
+            )
+          })}
+        </>)
+        : (<>
+          <img
+            onClick={readThree}
+            src={require('./assets/CardBacks.jpg')} alt='Click to draw three cards'
+            className='rounded rounded-lg mx-auto hover:-rotate-3 transition transition-all duration-300 ease-in-out'
+          />
+          <img
+            onClick={readThree}
+            src={require('./assets/CardBacks.jpg')} alt='Click to draw three cards'
+            className='rounded rounded-lg mx-auto hover:-rotate-3 transition transition-all duration-300 ease-in-out'
+          />
+          <img
+            onClick={readThree}
+            src={require('./assets/CardBacks.jpg')} alt='Click to draw three cards' 
+            className='rounded rounded-lg mx-auto hover:-rotate-3 transition transition-all duration-300 ease-in-out'
+          />
+          </>)
+      }
+      </div>
   )
 }
 
