@@ -5,15 +5,14 @@ import TarotCard from './TarotCard';
 const DailyCard = () => {
     const [dailyCard, setDailyCard] = useState(undefined);
     const variants = {
-      visible: i => ({
+      visible: {
         opacity: 1,
-        y: 0,
+        x: 0,
         transition: {
-          delay: i * 0.5,
           duration: 0.3,
         }
-      }),
-      hidden: { y: -500, opacity: 0.5 }
+      },
+      hidden: { x: -500, opacity: 0.5 }
     }
 
     useEffect(() => {
