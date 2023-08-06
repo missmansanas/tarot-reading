@@ -15,7 +15,7 @@ const TarotCard = ({ card, allowHover }) => {
     }
     
     return (
-        <div className='mx-auto'>
+        <div className='mx-auto w-full h-full col-span-1'>
             {!open ? 
             (
                 <img 
@@ -27,13 +27,14 @@ const TarotCard = ({ card, allowHover }) => {
             ) : (
                 <div 
                     onMouseLeave={handleMouseEvent}
-                    className="rounded rounded-lg mx-auto"
+                    className="rounded rounded-lg mx-auto w-full"
                     style={{
                         backgroundImage: `url(${cardArt})`,
                         backgroundRepeat: `no-repeat`,
                         backgroundSize: `cover`,
                         backgroundPosition: `50%`,
-                        height: `100%`
+                        height: `100%`,
+                        width: `100%`
                     }}
                     alt={card.name}>
                     <div className="rounded rounded-lg
@@ -41,7 +42,7 @@ const TarotCard = ({ card, allowHover }) => {
                         backdrop-blur-sm bg-white/50
                         flex flex-col justify-center gap-4
                         text-center
-                        p-1 md:px-5">
+                        p-5 md:px-15 mx-auto">
                         <p className='displayfont tracking-widest font-bold'>{card.name}</p>
                         <p className='block md:hidden'>{card.symbols}</p>
                         <p className='hidden md:block'>{card.description}</p>

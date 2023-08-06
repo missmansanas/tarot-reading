@@ -46,7 +46,7 @@ const DailyCard = () => {
     <div className="container mx-auto justify-center items-center">
         {dailyCard !== undefined
         ? (<div className='grid grid-cols-1 md:grid-cols-2 mx-auto lg:w-2/3 justify-center text-center items-center gap-4 px-5'>
-            <TarotCard card={dailyCard} allowHover="false" />
+            <TarotCard card={dailyCard} allowHover={false} />
             <div>
             <p className='displayfont tracking-widest font-bold'>{dailyCard.name}</p>
             <p className='block md:hidden'>{dailyCard.symbols}</p>

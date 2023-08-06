@@ -8,15 +8,30 @@
 }
 
 body {
-  background: linear-gradient(217deg,rgb(200,136,152), rgba(200,136,152,0.3) 70.71%),
+  /* background: linear-gradient(217deg,rgb(228, 207, 213), rgba(200,136,152,0.3) 70.71%),
               linear-gradient(127deg, rgb(138,155,199), rgba(138,155,199, 0.8) 70.71%),
-              linear-gradient(336deg,rgb(189,158,190), rgba(189,158,190, 0.3) 70.71%);
+              linear-gradient(336deg,rgb(189,158,190), rgba(189,158,190, 0.3) 70.71%); */
+  background: linear-gradient(217deg, #ee7752, #f4dbe4, #23a6d5, #9758b9, #23d5ab, #fe98b5, #f4dbe4);
   background-repeat: no-repeat;
   background-color: white;
-  color: black;
+  background-size: 400% 400%;
+  animation: gradient 60s ease infinite;
   background-attachment: fixed;
+  color: black;
   text-shadow: none;
   padding: 15px 30px 30px;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 a, a:hover, a:active, a:visited {
