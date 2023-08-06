@@ -1,14 +1,41 @@
-// import "bootstrap/dist/css/bootstrap.min.css";
-// import "./tarot-cards.json"
 import { useState } from 'react';
-// import Container from "react-bootstrap/Container";
-// import Row from "react-bootstrap/Row";
-// import Col from "react-bootstrap/Col";
+import { motion } from "framer-motion";
 import TarotCard from "./TarotCard";
 
 
 const ThreeCards = () => {
   const [reading, setReading] = useState()
+
+  const variants = {
+    visible: (i) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: i * 0.1,
+        duration: 0.3,
+      },
+    }),
+    hidden: { y: -500, opacity: 0 },
+  };
+
+  const cardBacks = {
+    hover: { 
+      rotate: 1,
+      y: -15
+    },
+    hidden: {
+      opacity: 0,
+      x: -1000
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.5
+      }
+    }
+
+  }
 
   const readThree = async () => {
     const tarotData = require(`./tarot-cards.json`);
@@ -36,32 +63,65 @@ const ThreeCards = () => {
 
   return (
       <div className="container grid grid-cols-2 lg:grid-cols-4 auto-rows-min mx-auto p-5 lg:px-15 gap-4">
-        <img src={require('./assets/CardBacks.jpg')} alt="Card Back" className="rounded rounded-leg mx-auto hover:-rotate-3 transition transition-all duration-300 ease-in-out" onClick={readThree}/>
+        <motion.img
+          src={require('./assets/CardBacks.jpg')} 
+          alt="Card Back"
+          className="rounded rounded-lg mx-auto"
+          onClick={readThree}
+          whileHover="hover"
+          animate="visible"
+          initial="hidden"
+          variants={cardBacks}
+          />
 
       {reading?.length === 3
         ? (<>
-          {reading.map((reading) => {
+          {reading.map((reading, i) => {
             return (
-              <TarotCard card={reading} allowHover={true} />
-            )
+              <TarotCard
+                card={reading}
+                allowHover={true}
+                key={reading.name}
+                custom={i}  // Pass the index as a custom prop
+                variants={variants}
+                animate="visible"
+                initial="hidden"
+              />
+            );
           })}
         </>)
         : (<>
-          <img
+          <motion.img
             onClick={readThree}
             src={require('./assets/CardBacks.jpg')} alt='Click to draw three cards'
-            className='rounded rounded-lg mx-auto hover:-rotate-3 transition transition-all duration-300 ease-in-out'
+            className='rounded rounded-lg mx-auto'
+            whileHover="hover"
+            animate="visible"
+            initial="hidden"
+            variants={cardBacks}
+            exit="hidden"
           />
-          <img
+          <motion.img
             onClick={readThree}
             src={require('./assets/CardBacks.jpg')} alt='Click to draw three cards'
-            className='rounded rounded-lg mx-auto hover:-rotate-3 transition transition-all duration-300 ease-in-out'
+            className='rounded rounded-lg mx-auto'
+            whileHover="hover"
+            animate="visible"
+            initial="hidden"
+            variants={cardBacks}
+            exit="hidden"
           />
-          <img
+          <motion.img
             onClick={readThree}
-            src={require('./assets/CardBacks.jpg')} alt='Click to draw three cards' 
-            className='rounded rounded-lg mx-auto hover:-rotate-3 transition transition-all duration-300 ease-in-out'
+            src={require('./assets/CardBacks.jpg')} alt='Click to draw three cards'
+            className='rounded rounded-lg mx-auto'
+            whileHover="hover"
+            animate="visible"
+            initial="hidden"
+            variants={cardBacks}
+            exit="hidden"
           />
+
           </>)
       }
       </div>

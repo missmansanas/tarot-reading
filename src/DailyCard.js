@@ -1,12 +1,20 @@
 import {useState, useEffect} from 'react';
 import "./tarot-cards.json";
 import TarotCard from './TarotCard';
-// import Row from 'react-bootstrap/Row';
-// import Col from 'react-bootstrap/Col';
-// import Container from 'react-bootstrap/Container';
 
 const DailyCard = () => {
     const [dailyCard, setDailyCard] = useState(undefined);
+    const variants = {
+      visible: i => ({
+        opacity: 1,
+        y: 0,
+        transition: {
+          delay: i * 0.5,
+          duration: 0.3,
+        }
+      }),
+      hidden: { y: -500, opacity: 0.5 }
+    }
 
     useEffect(() => {
         const currentDate = new Date().toLocaleDateString();
@@ -46,7 +54,7 @@ const DailyCard = () => {
     <div className="container mx-auto justify-center items-center">
         {dailyCard !== undefined
         ? (<div className='grid grid-cols-1 md:grid-cols-2 mx-auto lg:w-2/3 justify-center text-center items-center gap-4 px-5'>
-            <TarotCard card={dailyCard} allowHover={false} />
+            <TarotCard card={dailyCard} allowHover={false} variants={variants}/>
             <div>
             <p className='displayfont tracking-widest font-bold'>{dailyCard.name}</p>
             <p className='block md:hidden'>{dailyCard.symbols}</p>

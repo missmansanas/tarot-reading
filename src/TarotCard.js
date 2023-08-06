@@ -1,8 +1,7 @@
-// import Card from "react-bootstrap/Card";
 import { useState } from "react";
-// import Collapse from "react-bootstrap/Collapse";
+import { motion } from "framer-motion";
 
-const TarotCard = ({ card, allowHover }) => {
+const TarotCard = ({ card, allowHover, custom, variants }) => {
     const [open, setOpen] = useState(false);
     const cardArt = card.arcana === "Minor"
     ? (require(`./assets/${card.suit}${card.rank}.jpg`)) 
@@ -15,7 +14,13 @@ const TarotCard = ({ card, allowHover }) => {
     }
     
     return (
-        <div className='mx-auto w-full h-full col-span-1'>
+        <motion.div
+        className='mx-auto w-full h-full col-span-1' 
+        custom={custom}  // Pass the index as a custom prop
+        variants={variants}
+        animate="visible"
+        initial="hidden"
+        >
             {!open ? 
             (
                 <img 
@@ -39,7 +44,7 @@ const TarotCard = ({ card, allowHover }) => {
                     alt={card.name}>
                     <div className="rounded rounded-lg
                         w-full h-full
-                        backdrop-blur-sm bg-white/50
+                        backdrop-blur-lg bg-black/80 text-white
                         flex flex-col justify-center gap-4
                         text-center
                         p-5 md:px-15 mx-auto">
@@ -50,7 +55,7 @@ const TarotCard = ({ card, allowHover }) => {
                 </div>
             )
             }
-        </div>
+        </motion.div>
     )
     
 }
