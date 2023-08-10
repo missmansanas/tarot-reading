@@ -24,7 +24,7 @@ const ThreeCards = () => {
   const cardBacks = {
     hover: { 
       rotate: 1,
-      y: -25,
+      y: -15,
     },
     visible: (i) => ({
       opacity: 1,

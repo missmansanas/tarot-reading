@@ -9,16 +9,15 @@
 
 body {
   /* background: linear-gradient(217deg, #ffd5c8, #f4dbe4, #f0d4ff,#fe98b5, #f4dbe4); */
-  background: #f6e3ff;
-  background: radial-gradient(circle, #f09eff 0%, #f6e3ff00 50%);
-  background-color: #f6e3ff;
+  background: #f0e3ff;
+  background: radial-gradient(circle, #ec9effcc 0%, #f6e3ff00 50%);
+  background-color: #f0e3ff;
   background-repeat: no-repeat;
   background-size: 300% 300%;
   animation: gradient 60s ease infinite;
   background-attachment: fixed;
   color: black;
   text-shadow: none;
-  padding: 15px 30px 30px;
 }
 
 @keyframes gradient {
@@ -48,4 +47,9 @@ body {
 
 .displayfont {
   font-family: 'Milchella';
+}
+
+
+.App {
+	padding: 15px 30px 30px;
 }

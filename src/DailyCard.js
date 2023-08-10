@@ -54,11 +54,10 @@ const DailyCard = () => {
         {dailyCard !== undefined
         ? (<div className='grid grid-cols-1 md:grid-cols-2 mx-auto lg:w-2/3 justify-center text-center items-center gap-4 px-5'>
             <TarotCard card={dailyCard} allowHover={false} variants={variants}/>
-            <div>
-            <p className='displayfont tracking-widest font-bold'>{dailyCard.name}</p>
-            <p className='block'>{dailyCard.symbols}</p>
-            <p className='hidden md:block'>{dailyCard.description}</p>
-            <p>Check back tomorrow for a new card of the day.</p>
+            <div className='flex flex-col gap-3'>
+              <p className='displayfont tracking-widest font-bold'>{dailyCard.name}</p>
+              <p className='block'>{dailyCard.symbols}</p>
+              <p className='hidden md:block'>{dailyCard.description}</p>
             </div>
         </div>
         ) : (
