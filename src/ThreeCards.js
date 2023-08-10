@@ -11,11 +11,14 @@ const ThreeCards = () => {
       opacity: 1,
       x: 0,
       transition: {
-        delay: i * 0.3,
-        duration: 0.3,
+        delay: (i + 1) * 0.1,
+        duration: 0.7,
       },
     }),
-    hidden: { x: -500, opacity: 0.5 },
+    hidden: (i) => ({
+      x: (i + 1) * -300,
+      opacity: 1
+    }),
   };
 
   const cardBacks = {
@@ -24,18 +27,18 @@ const ThreeCards = () => {
       y: -15,
       x:[-15, 0]
     },
-    hidden: {
-      opacity: 0,
-      x: -500
-    },
     visible: (i) => ({
       opacity: 1,
       x: 0,
       transition: {
-        delay: i * 0.3,
-        duration: 0.5
+        delay: (i + 1) * 0.1,
+        duration: 0.7
       }
-    })
+    }),
+    hidden: (i) => ({
+      opacity: 1,
+      x: (i + 1) * -300
+    }),
 
   }
 
@@ -62,9 +65,8 @@ const ThreeCards = () => {
     return reading;
   }
 
-
   return (
-      <div className="container grid grid-cols-2 lg:grid-cols-4 auto-rows-min mx-auto p-5 lg:px-15 gap-4">
+      <div className="container grid grid-cols-2 lg:grid-cols-4 auto-rows-min mx-auto px-5 lg:px-15 gap-4">
         <motion.img
           src={require('./assets/CardBacks.jpg')} 
           alt="Card Back"
@@ -93,42 +95,21 @@ const ThreeCards = () => {
           })}
         </>)
         : (<>
-        {Array(3).fill(true).map((_, i) =>
-          <motion.img
-            onClick={readThree}
-            src={require('./assets/CardBacks.jpg')} alt='Click to draw three cards'
-            className='rounded rounded-lg mx-auto'
-            whileHover="hover"
-            key={i}
-            custom={i}
-            animate="visible"
-            initial="hidden"
-            variants={cardBacks}
-            exit="hidden"
-          />
-        )}
-          {/* <motion.img
-            onClick={readThree}
-            src={require('./assets/CardBacks.jpg')} alt='Click to draw three cards'
-            className='rounded rounded-lg mx-auto'
-            whileHover="hover"
-            animate="visible"
-            initial="hidden"
-            variants={cardBacks}
-            exit="hidden"
-          />
-          <motion.img
-            onClick={readThree}
-            src={require('./assets/CardBacks.jpg')} alt='Click to draw three cards'
-            className='rounded rounded-lg mx-auto'
-            whileHover="hover"
-            animate="visible"
-            initial="hidden"
-            variants={cardBacks}
-            exit="hidden"
-          /> */}
-
-          </>)
+          {Array(3).fill(true).map((_, i) =>
+            <motion.img
+              onClick={readThree}
+              src={require('./assets/CardBacks.jpg')} alt='Click to draw three cards'
+              className='rounded rounded-lg mx-auto'
+              whileHover="hover"
+              key={i}
+              custom={i}
+              animate="visible"
+              initial="hidden"
+              variants={cardBacks}
+              exit="hidden"
+            />
+          )}
+        </>)
       }
       </div>
   )

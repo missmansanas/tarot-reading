@@ -9,7 +9,7 @@ const DailyCard = () => {
         opacity: 1,
         x: 0,
         transition: {
-          duration: 0.3,
+          duration: 0.5,
         }
       },
       hidden: { x: -500, opacity: 0.5 }
@@ -56,8 +56,9 @@ const DailyCard = () => {
             <TarotCard card={dailyCard} allowHover={false} variants={variants}/>
             <div>
             <p className='displayfont tracking-widest font-bold'>{dailyCard.name}</p>
-            <p className='block md:hidden'>{dailyCard.symbols}</p>
+            <p className='block'>{dailyCard.symbols}</p>
             <p className='hidden md:block'>{dailyCard.description}</p>
+            <p>Check back tomorrow for a new card of the day.</p>
             </div>
         </div>
         ) : (
