@@ -7,11 +7,13 @@
   src: url("./assets/Milchella-Regular.ttf");
 }
 
-body {
-  /* background: linear-gradient(217deg, #ffd5c8, #f4dbe4, #f0d4ff,#fe98b5, #f4dbe4); */
-  background: #f0e3ff;
-  background: radial-gradient(circle, #ec9effcc 0%, #f6e3ff00 50%);
-  background-color: #f0e3ff;
+.displayfont {
+  font-family: 'Milchella';
+}
+
+/* body {
+  background: radial-gradient(circle, #e3b9afcc 0%, transparent 50%);
+  background-color: #EDD6D1;
   background-repeat: no-repeat;
   background-size: 300% 300%;
   animation: gradient 60s ease infinite;
@@ -19,6 +21,7 @@ body {
   color: black;
   text-shadow: none;
 }
+
 
 @keyframes gradient {
 	0% {
@@ -43,13 +46,5 @@ body {
 		background-position: top right;
 	}
 }
+*/
 
-
-.displayfont {
-  font-family: 'Milchella';
-}
-
-
-.App {
-	padding: 15px 30px 30px;
-}
