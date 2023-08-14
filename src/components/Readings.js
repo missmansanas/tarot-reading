@@ -133,6 +133,7 @@ const Readings = () => {
                 animate="visible"
                 initial="hidden"
                 whileHover="hover"
+                isDailyCard={true}
               />
           ) : (
               <div className='rounded rounded-lg aspect-[300/527] max-w-[300px] h-full backdrop-blur-sm bg-neutral-200/70 text-zinc flex place-content-center text-center displayfont text-3xl tracking-widest'>
@@ -154,6 +155,7 @@ const Readings = () => {
                 animate="visible"
                 initial="hidden"
                 whileHover="hover"
+                isDailyCard={false}
               />
             );
           })}
