@@ -14,7 +14,7 @@ function App() {
 
   return (
 
-    <div className="App min-h-screen border-box flex flex-col justify-center bg-gradient-to-br from-stone-100 via-purple-100 to-purple-200 bg-fixed text-zinc selection:bg-purple-300 cursor-crosshair">
+    <div className="App min-h-screen border-box flex flex-col justify-center bg-gradient-to-br from-stone-100 via-purple-100 to-purple-200 bg-fixed text-zinc selection:bg-purple-300 cursor-cat">
       <BrowserRouter basename='/tarot-reading'>
           <Routes>
             <Route index element={<Readings/>} />
