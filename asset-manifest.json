@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/tarot-reading/static/css/main.90bb526d.css",
-    "main.js": "/tarot-reading/static/js/main.f7e4c9ad.js",
+    "main.css": "/tarot-reading/static/css/main.faacaae7.css",
+    "main.js": "/tarot-reading/static/js/main.36f6f735.js",
     "static/media/Milchella-Regular.ttf": "/tarot-reading/static/media/Milchella-Regular.d2665151b0d9f53707d7.ttf",
     "static/media/19-TheSun.jpg": "/tarot-reading/static/media/19-TheSun.cbd1c0b3a74f297551ce.jpg",
     "static/media/Pentacles05.jpg": "/tarot-reading/static/media/Pentacles05.94eeb1ea065bfb321312.jpg",
@@ -82,12 +82,13 @@
     "static/media/Pentacles04.jpg": "/tarot-reading/static/media/Pentacles04.dd80219709222a9f6052.jpg",
     "static/media/Cups05.jpg": "/tarot-reading/static/media/Cups05.1c0eb00cffdbea2dbb1b.jpg",
     "static/media/Wands07.jpg": "/tarot-reading/static/media/Wands07.c6205b463a8d8df5873b.jpg",
+    "static/media/cat-cursor.cur": "/tarot-reading/static/media/cat-cursor.c9fdbb3234565a1cd527.cur",
     "index.html": "/tarot-reading/index.html",
-    "main.90bb526d.css.map": "/tarot-reading/static/css/main.90bb526d.css.map",
-    "main.f7e4c9ad.js.map": "/tarot-reading/static/js/main.f7e4c9ad.js.map"
+    "main.faacaae7.css.map": "/tarot-reading/static/css/main.faacaae7.css.map",
+    "main.36f6f735.js.map": "/tarot-reading/static/js/main.36f6f735.js.map"
   },
   "entrypoints": [
-    "static/css/main.90bb526d.css",
-    "static/js/main.f7e4c9ad.js"
+    "static/css/main.faacaae7.css",
+    "static/js/main.36f6f735.js"
   ]
 }
