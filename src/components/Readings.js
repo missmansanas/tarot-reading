@@ -85,7 +85,7 @@ const Readings = () => {
     }),
     hidden: (i) => ({
       x: (i + 1) * -300,
-      opacity: 1
+      opacity: 0
     }),
   };
 
@@ -112,16 +112,17 @@ const Readings = () => {
 
 
   return (
-      <div className="shrink flex flex-row flex-wrap w-full p-8 gap-8 place-content-center h-full">
-      <motion.div layout
-        className="flex flex-col-reverse justify-end fixed bottom-5 right-5 z-999 gap-2"
-        animate={{
-          opacity: [0, 1]
-        }}
-      >
-        <button onClick={() => setReading(undefined)} className={reading ? 'rounded rounded-full py-3 px-6 border border-black displayfont font-extrabold text-xl tracking-widest bg-white/50 backdrop-blur-sm' : 'hidden'}>↺</button>
-        <Link to='/about'><button className={'rounded rounded-full py-3 px-6 border border-black displayfont font-extrabold text-xl tracking-widest bg-white/50 backdrop-blur-sm'}>ℹ️</button></Link>
-      </motion.div>
+      <div className="shrink flex flex-row flex-wrap lg:grid lg:grid-cols-2 xl:grid-cols-4 w-full p-8 gap-8 justify-center place-items-center">
+
+        <button
+          onClick={() => setReading(undefined)}
+          className={reading
+            ? 'fixed bottom-6 right-6 displayfont tracking-wider text-3xl bg-white/50 p-2 rounded rounded-full'
+            : 'hidden'
+          }>
+            ⏪
+          </button>
+
         {/* First card is the card of the day */}
         {dailyCard !== undefined
           ? (
@@ -136,7 +137,7 @@ const Readings = () => {
                 isDailyCard={true}
               />
           ) : (
-              <div className='rounded rounded-lg aspect-[300/527] max-w-[300px] h-full backdrop-blur-sm bg-neutral-200/70 text-zinc flex place-content-center text-center displayfont text-3xl tracking-widest'>
+              <div className='rounded rounded-lg aspect-[300/527] h-full backdrop-blur-sm bg-neutral-200/70 text-zinc flex place-content-center text-center displayfont text-3xl tracking-widest'>
                 <p>Mapping the stars...</p>
               </div>
           )
@@ -166,7 +167,7 @@ const Readings = () => {
               onClick={readThree}
               src={require('../assets/CardBacks.jpg')}
               alt='Card Back. Click to draw three cards'
-              className='rounded rounded-lg'
+              className='rounded rounded-lg aspect-[300/537] max-w-[300px]'
               key={i}
               custom={i}
               whileHover="hover"

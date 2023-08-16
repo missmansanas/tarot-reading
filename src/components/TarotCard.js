@@ -14,7 +14,7 @@ const TarotCard = ({ card, custom, variants, isDailyCard }) => {
     return (
         <motion.div
             layout
-            className='h-auto aspect-[300/527] w-[300px]'
+            className='h-auto aspect-[300/527] w-[300px] lg:max-w-[300px]'
             custom={custom}  // Pass the index as a custom prop
             variants={variants}
             animate="visible"
@@ -32,7 +32,7 @@ const TarotCard = ({ card, custom, variants, isDailyCard }) => {
             ) : (
                 <div 
                     onClick={handleMouseEvent}
-                    className="rounded rounded-lg aspect-[300/527] max-w-[300px]"
+                    className="rounded rounded-lg aspect-[300/527]"
                     style={{
                         backgroundImage: `url(${cardArt})`,
                         backgroundRepeat: `no-repeat`,
