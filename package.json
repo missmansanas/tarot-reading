@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "http://missmansanas.github.io/tarot-reading/#",
   "dependencies": {
-    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^14.6.1",
     "framer-motion": "^10.15.0",
